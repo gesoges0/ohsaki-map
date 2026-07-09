@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>気になり物件マップ</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    #map { height: 100vh; }
+    .popup-name { font-weight: bold; font-size: 14px; }
+    .popup-rent { color: #e44; font-size: 13px; }
+    .popup-info { font-size: 12px; color: #555; }
+    .popup-link { font-size: 12px; }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  const map = L.map('map').setView([35.621, 139.730], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  const properties = [
+    {
+      name: "Lien御殿山",
+      lat: 35.619836, lng: 139.733157,
+      rent: "13.8万円（管理費 0.8万）",
+      walk: "大崎駅 歩8分",
+      layout: "1K / 25.84m²",
+      built: "2023年2月（築4年）",
+      url: "https://suumo.jp/chintai/jnc_000108190909/?bc=100515094325"
+    },
+    {
+      name: "KDA品川大崎",
+      lat: 35.622062, lng: 139.732307,
+      rent: "12.1万円（管理費 1.0万）",
+      walk: "大崎駅 歩6分",
+      layout: "1R / 22.57m²",
+      built: "2019年1月（築8年）",
+      url: "https://suumo.jp/chintai/jnc_000107384379/?bc=100508455806"
+    },
+    {
+      name: "マンション名不明",
+      lat: 35.621481, lng: 139.732523,
+      rent: "13.8万円（管理費 0.8万）",
+      walk: "大崎駅 歩8分",
+      layout: "1K / 25.84m²",
+      built: "2023年2月（築4年）",
+      url: "https://suumo.jp/chintai/jnc_000108214284/?bc=100514895936"
+    },
+    {
+      name: "スカイコートルアナ御殿山",
+      lat: 35.622975, lng: 139.733195,
+      rent: "12.73万円（管理費 0.97万）",
+      walk: "大崎駅 歩12分",
+      layout: "1K / 25.53m²",
+      built: "2022年9月（築4年）",
+      url: "https://suumo.jp/chintai/jnc_000108261183/?bc=100515170543"
+    },
+    {
+      name: "コンシェリア大崎",
+      lat: 35.622261, lng: 139.720760,
+      rent: "12.5万円（管理費 1.0万）",
+      walk: "大崎広小路駅 歩3分 / 大崎駅 歩10分",
+      layout: "1K / 24.45m²",
+      built: "2018年2月（築9年）",
+      url: "https://suumo.jp/chintai/jnc_000108408942/?bc=100516065696"
+    },
+    {
+      name: "大崎ガーデンレジデンス",
+      lat: 35.614624, lng: 139.730542,
+      rent: "14.8万円（管理費 なし）",
+      walk: "大崎駅 歩8分",
+      layout: "1K / 25.15m²",
+      built: "2018年8月（築8年）",
+      url: "https://suumo.jp/chintai/jnc_000108214290/?bc=100514906501"
+    },
+    {
+      name: "KDA御殿山",
+      lat: 35.624937, lng: 139.731411,
+      rent: "11.5万円（管理費 1.0万）",
+      walk: "五反田駅 歩9分 / 大崎駅 歩10分",
+      layout: "1K / 22.5m²",
+      built: "2019年7月（築8年）",
+      url: "https://suumo.jp/chintai/jnc_000107389808/?bc=100514080408"
+    },
+    {
+      name: "アルテシモピトレ",
+      lat: 35.624999, lng: 139.731164,
+      rent: "12.5万円（管理費 1.0万）",
+      walk: "五反田駅 歩8分 / 大崎駅 歩10分",
+      layout: "1K / 21.84m²",
+      built: "2017年11月（築9年）",
+      url: "https://suumo.jp/chintai/jnc_000107819335/?bc=100511547409"
+    }
+  ];
+
+  properties.forEach(p => {
+    L.marker([p.lat, p.lng]).addTo(map).bindPopup(`
+      <div class="popup-name">${p.name}</div>
+      <div class="popup-rent">${p.rent}</div>
+      <div class="popup-info">${p.walk}</div>
+      <div class="popup-info">${p.layout} | ${p.built}</div>
+      <div class="popup-link"><a href="${p.url}" target="_blank">SUUMOで見る</a></div>
+    `);
+  });
+</script>
+</body>
+</html>
