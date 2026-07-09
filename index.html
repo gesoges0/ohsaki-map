@@ -97,6 +97,14 @@
     }
   ];
 
+  L.circle([35.6223138, 139.7274003], {
+    radius: 2000,
+    color: '#3388ff',
+    fillColor: '#3388ff',
+    fillOpacity: 0.08,
+    weight: 2
+  }).addTo(map).bindPopup('アートヴィレッジ大崎セントラルタワーから半径2km');
+
   properties.forEach(p => {
     L.marker([p.lat, p.lng]).addTo(map).bindPopup(`
       <div class="popup-name">${p.name}</div>
