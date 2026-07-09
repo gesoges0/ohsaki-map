@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>物件メモ</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; font-size: 13px; background: #f9f9f9; }
+    h1 { margin: 16px 20px 8px; font-size: 18px; }
+    nav { margin: 0 20px 12px; }
+    nav a { color: #3388ff; text-decoration: none; margin-right: 16px; }
+    nav a:hover { text-decoration: underline; }
+    .wrap { overflow-x: auto; padding: 0 20px 40px; }
+    table { border-collapse: collapse; white-space: nowrap; background: #fff; }
+    th { background: #333; color: #fff; padding: 8px 12px; text-align: left; position: sticky; top: 0; }
+    td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: middle; }
+    tr:hover td { background: #f0f6ff; }
+    td.num { text-align: right; }
+    td.rent { color: #e44; font-weight: bold; }
+    td.total { color: #c00; font-weight: bold; }
+    a.suumo { color: #3388ff; text-decoration: none; }
+    a.suumo:hover { text-decoration: underline; }
+    .note { margin: 8px 20px; font-size: 12px; color: #777; }
+  </style>
+</head>
+<body>
+<h1>物件メモ</h1>
+<nav>
+  <a href="index.html">地図で見る</a>
+  <a href="table.html">表で見る</a>
+</nav>
+<div class="wrap">
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>物件名</th>
+      <th>所在地</th>
+      <th>大崎駅<br>徒歩(分)</th>
+      <th>最寄り駅</th>
+      <th>賃料</th>
+      <th>管理費</th>
+      <th>月額合計</th>
+      <th>間取り</th>
+      <th>面積</th>
+      <th>築年月</th>
+      <th>築年数</th>
+      <th>階/総階</th>
+      <th>敷金</th>
+      <th>礼金</th>
+      <th>敷金+礼金</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="num">1</td>
+      <td><a class="suumo" href="https://suumo.jp/chintai/jnc_000108190909/?bc=100515094325" target="_blank">Lien御殿山</a></td>
+      <td>品川区北品川５</td>
+      <td class="num">8</td>
+      <td>大崎 歩8分</td>
+      <td class="rent">13.8万</td>
+      <td class="num">0.8万</td>
+      <td class="total">14.6万</td>
+      <td>1K</td>
+      <td class="num">25.84m²</td>
+      <td>2023年2月</td>
+      <td>築4年</td>
+      <td>9/10階</td>
+      <td class="num">13.8万</td>
+      <td class="num">20.7万</td>
+      <td class="num">34.5万</td>
+    </tr>
+    <tr>
+      <td class="num">2</td>
+      <td><a class="suumo" href="https://suumo.jp/chintai/jnc_000107384379/?bc=100508455806" target="_blank">KDA品川大崎</a></td>
+      <td>品川区北品川５</td>
+      <td class="num">6</td>
+      <td>大崎 歩6分</td>
+      <td class="rent">12.1万</td>
+      <td class="num">1.0万</td>
+      <td class="total">13.1万</td>
+      <td>1R</td>
+      <td class="num">22.57m²</td>
+      <td>2019年1月</td>
+      <td>築8年</td>
+      <td>10/10階</td>
+      <td class="num">12.1万</td>
+      <td class="num">12.1万</td>
+      <td class="num">24.2万</td>
+    </tr>
+    <tr>
+      <td class="num">3</td>
+      <td><a class="suumo" href="https://suumo.jp/chintai/jnc_000108214284/?bc=100514895936" target="_blank">マンション名不明 ※1</a></td>
+      <td>品川区北品川５</td>
+      <td class="num">8</td>
+      <td>大崎 歩8分</td>
+      <td class="rent">13.8万</td>
+      <td class="num">0.8万</td>
+      <td class="total">14.6万</td>
+      <td>1K</td>
+      <td class="num">25.84m²</td>
+      <td>2023年2月</td>
+      <td>築4年</td>
+      <td>9/10階</td>
+      <td class="num">13.8万</td>
+      <td class="num">20.7万</td>
+      <td class="num">34.5万</td>
+    </tr>
+    <tr>
+      <td class="num">4</td>
+      <td><a class="suumo" href="https://suumo.jp/chintai/jnc_000108261183/?bc=100515170543" target="_blank">スカイコートルアナ御殿山</a></td>
+      <td>品川区北品川５</td>
+      <td class="num">12</td>
+      <td>大崎 歩12分</td>
+      <td class="rent">12.73万</td>
+      <td class="num">0.97万</td>
+      <td class="total">13.7万</td>
+      <td>1K</td>
+      <td class="num">25.53m²</td>
+      <td>2022年9月</td>
+      <td>築4年</td>
+      <td>4/5階</td>
+      <td class="num">12.73万</td>
+      <td class="num">12.73万</td>
+      <td class="num">25.46万</td>
+    </tr>
+    <tr>
+      <td class="num">5</td>
+      <td><a class="suumo" href="https://suumo.jp/chintai/jnc_000108408942/?bc=100516065696" target="_blank">コンシェリア大崎</a></td>
+      <td>品川区西五反田８</td>
+      <td class="num">10</td>
+      <td>大崎広小路 歩3分</td>
+      <td class="rent">12.5万</td>
+      <td class="num">1.0万</td>
+      <td class="total">13.5万</td>
+      <td>1K</td>
+      <td class="num">24.45m²</td>
+      <td>2018年2月</td>
+      <td>築9年</td>
+      <td>11/15階</td>
+      <td>なし</td>
+      <td class="num">12.5万</td>
+      <td class="num">12.5万</td>
+    </tr>
+    <tr>
+      <td class="num">6</td>
+      <td><a class="suumo" href="https://suumo.jp/chintai/jnc_000108214290/?bc=100514906501" target="_blank">大崎ガーデンレジデンス</a></td>
+      <td>品川区西品川１</td>
+      <td class="num">8</td>
+      <td>大崎 歩8分</td>
+      <td class="rent">14.8万</td>
+      <td>なし</td>
+      <td class="total">14.8万</td>
+      <td>1K</td>
+      <td class="num">25.15m²</td>
+      <td>2018年8月</td>
+      <td>築8年</td>
+      <td>9/23階</td>
+      <td>なし</td>
+      <td class="num">14.8万</td>
+      <td class="num">14.8万</td>
+    </tr>
+    <tr>
+      <td class="num">7</td>
+      <td><a class="suumo" href="https://suumo.jp/chintai/jnc_000107389808/?bc=100514080408" target="_blank">KDA御殿山</a></td>
+      <td>品川区東五反田３</td>
+      <td class="num">10</td>
+      <td>五反田 歩9分</td>
+      <td class="rent">11.5万</td>
+      <td class="num">1.0万</td>
+      <td class="total">12.5万</td>
+      <td>1K</td>
+      <td class="num">22.5m²</td>
+      <td>2019年7月</td>
+      <td>築8年</td>
+      <td>8/14階</td>
+      <td class="num">11.5万</td>
+      <td class="num">11.5万</td>
+      <td class="num">23.0万</td>
+    </tr>
+    <tr>
+      <td class="num">8</td>
+      <td><a class="suumo" href="https://suumo.jp/chintai/jnc_000107819335/?bc=100511547409" target="_blank">アルテシモピトレ</a></td>
+      <td>品川区東五反田３</td>
+      <td class="num">10</td>
+      <td>五反田 歩8分</td>
+      <td class="rent">12.5万</td>
+      <td class="num">1.0万</td>
+      <td class="total">13.5万</td>
+      <td>1K</td>
+      <td class="num">21.84m²</td>
+      <td>2017年11月</td>
+      <td>築9年</td>
+      <td>12/14階</td>
+      <td class="num">12.5万</td>
+      <td class="num">12.5万</td>
+      <td class="num">25.0万</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="note">※1 物件名不明（SUUMO参照）</p>
+</body>
+</html>
